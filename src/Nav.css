@@ -1,0 +1,14 @@
+.Nav-list {
+}
+
+.Nav-item {
+  color: black;
+  list-style: none;
+  margin: 10px;
+}
+
+.Nav-item a {
+  color: black;
+  font-size: large;
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+.ColorFactory {
+  background-color: black;
+  height: 400px;
+}
+
+.ColorFactory-heading {
+  padding-top: 100px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.ColorFactory a {
+  color: black;
+  font-size: medium;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.ColorFactory a:hover {
+  background-color: aqua;
+}
