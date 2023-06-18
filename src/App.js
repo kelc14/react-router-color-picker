@@ -25,23 +25,21 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/colors/new">
-            <ColorForm addColor={addColor} />
+      <Switch>
+        <Route exact path="/colors/new">
+          <ColorForm addColor={addColor} />
+        </Route>
+        {colors.map((color) => (
+          <Route exact path={`/colors/${color}`} key={uuid()}>
+            <ColorDetail color={color} key={uuid()} />
           </Route>
-          {colors.map((color) => (
-            <Route exact path={`/colors/${color}`} key={uuid()}>
-              <ColorDetail color={color} key={uuid()} />
-            </Route>
-          ))}
-          <Route exact path="/colors">
-            <ColorFactory />
-          </Route>
-          <Redirect to="/colors" />
-        </Switch>
-        <Nav colors={colors} />
-      </BrowserRouter>
+        ))}
+        <Route exact path="/colors">
+          <ColorFactory />
+        </Route>
+        <Redirect to="/colors" />
+      </Switch>
+      <Nav colors={colors} />
     </div>
   );
 }
